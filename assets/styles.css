@@ -295,3 +295,28 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .hero::before, .brand-mark span { animation: none; }
   .btn-primary::after { display: none; }
 }
+
+/* ---- Full motion system: progress, marquee, conic border ---- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; z-index: 60; height: 3px; width: 100%;
+  transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--purple), var(--amber), var(--green));
+}
+
+.ticker { overflow: hidden; background: var(--purple-deep); color: #e7dcf5; }
+.ticker-track { display: flex; width: max-content; animation: ticker-scroll 32s linear infinite; }
+.ticker-track span { flex: none; padding: 12px 0; font-size: 14px; font-weight: 600; letter-spacing: .04em; }
+@keyframes ticker-scroll { to { transform: translateX(-50%); } }
+
+.app-card { position: relative; isolation: isolate; }
+.app-card::before {
+  content: ""; position: absolute; inset: -2px; border-radius: 26px; z-index: -1;
+  background: conic-gradient(from 0deg, var(--purple), var(--amber), var(--green), var(--purple));
+  animation: app-border-spin 6s linear infinite;
+}
+@keyframes app-border-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .app-card::before { animation: none; }
+}
