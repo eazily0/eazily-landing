@@ -3,3 +3,10 @@ node_modules/
 Thumbs.db
 *.log
 assets/config.js
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
