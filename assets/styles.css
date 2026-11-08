@@ -265,3 +265,33 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .collection-grid { grid-template-columns: 1fr; gap: 12px; }
   .collection-card { min-height: 190px; }
 }
+
+/* ---- Motion & material effects (GSAP-friendly, reduced-motion safe) ---- */
+.hero { position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; width: 560px; height: 560px; border-radius: 50%;
+  top: -200px; right: -140px; pointer-events: none;
+  background: radial-gradient(circle at 30% 30%, rgb(109 40 217 / .16), transparent 65%);
+  animation: hero-blob 14s ease-in-out infinite alternate;
+}
+@keyframes hero-blob { to { transform: translate(-44px, 30px) scale(1.08); } }
+
+.btn-primary { position: relative; overflow: hidden; }
+.btn-primary::after {
+  content: ""; position: absolute; top: 0; left: -80%; width: 60%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgb(255 255 255 / .35), transparent);
+  transform: skewX(-20deg); transition: left .5s ease; pointer-events: none;
+}
+.btn-primary:hover::after { left: 120%; }
+
+.brand-mark span { display: inline-block; animation: dot-pulse 3.2s ease-in-out infinite; }
+@keyframes dot-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+
+.mock-card, .app-card { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+.hero-photo, .collection-card { will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .brand-mark span { animation: none; }
+  .btn-primary::after { display: none; }
+}

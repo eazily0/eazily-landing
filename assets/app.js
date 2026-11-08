@@ -71,9 +71,10 @@
     });
   }
 
-  // Gentle reveal-on-scroll (skipped entirely for reduced-motion users).
+  // Gentle reveal-on-scroll (skipped when GSAP handles motion, or entirely for
+  // reduced-motion users).
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion || !('IntersectionObserver' in window)) return;
+  if (reduceMotion || window.gsap || !('IntersectionObserver' in window)) return;
 
   var revealables = document.querySelectorAll('.services-grid li, .steps-grid li, .assurance-item, .pro-copy');
   var observer = new IntersectionObserver(function (entries) {
