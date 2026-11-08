@@ -6,13 +6,43 @@
     <title>Eazily — Vetted local home services</title>
     <meta name="description" content="Eazily connects you with vetted local professionals for AC service, plumbing, electrical, painting, cleaning and more — booked in minutes with clear pricing." />
     <meta name="theme-color" content="#f4f2fb" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://eazily.online/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eazily" />
     <meta property="og:title" content="Eazily — Vetted local home services" />
     <meta property="og:description" content="Reliable local pros for your home — booked in minutes with transparent pricing." />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eazily.online/" />
+    <meta property="og:image" content="https://eazily.online/assets/img/hero-editorial.jpg" />
+    <meta property="og:image:alt" content="Eazily home services at your doorstep" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eazily — Vetted local home services" />
+    <meta name="twitter:description" content="Reliable local pros for your home — booked in minutes with transparent pricing." />
+    <meta name="twitter:image" content="https://eazily.online/assets/img/hero-editorial.jpg" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Eazily",
+      "url": "https://eazily.online",
+      "logo": "https://eazily.online/assets/img/hero-editorial.jpg",
+      "description": "Eazily connects customers with vetted local service professionals across home services.",
+      "sameAs": []
+    }
+    </script>
+
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236d28d9'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%23f2a413'/%3E%3C/svg%3E" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="assets/img/hero-editorial.jpg" fetchpriority="high" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -23,6 +53,7 @@
         <a class="brand" href="#top" aria-label="Eazily home"><span class="brand-mark">eazily<span>.</span></span></a>
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#services">Services</a>
+          <a href="#collections">Collections</a>
           <a href="#how">How it works</a>
           <a href="#professionals">For professionals</a>
           <a href="#contact">Contact</a>
@@ -37,6 +68,7 @@
       </div>
       <div class="mobile-menu" id="mobile-menu" hidden>
         <a href="#services">Services</a>
+        <a href="#collections">Collections</a>
         <a href="#how">How it works</a>
         <a href="#professionals">For professionals</a>
         <a href="#contact">Contact</a>
@@ -56,16 +88,13 @@
               <a class="btn btn-primary btn-lg" href="#app">Get the app · Soon</a>
               <a class="btn btn-secondary btn-lg" href="#professionals">I'm a service professional</a>
             </div>
-          </div>
-          <div class="hero-visual" aria-hidden="true">
-            <div class="mock-card mock-main">
-              <div class="mock-row"><span class="mock-avatar">A</span><div><b>AC Service · Gurunanak</b><small>Rating ★ 4.9 · 2 Reviews</small></div></div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w60"></div>
-              <div class="mock-tags"><span>₹499 start</span><span>Today</span><span>Verified</span></div>
-              <div class="mock-btn">Book now</div>
+            <div class="hero-trust">
+              <span>✓ Verified partners</span><span>✓ Upfront pricing</span><span>✓ Rated work</span>
             </div>
-            <div class="mock-card mock-floating">
+          </div>
+          <div class="hero-visual">
+            <img class="hero-photo" src="assets/img/hero-editorial.jpg" alt="Eazily professional at work in a home" width="960" height="640" fetchpriority="high" decoding="async" />
+            <div class="mock-card mock-floating" aria-hidden="true">
               <div class="mock-check">✓</div>
               <div><b>Work confirmed</b><small>Electrician · 30 min window</small></div>
             </div>
@@ -76,14 +105,43 @@
       <!-- Reassurance -->
       <section class="assurance">
         <div class="container assurance-grid">
-          <div class="assurance-item"><span class="ai-icon">🛡️</span><div><b>Verified partners</b><p>Identity, qualifications and work history are reviewed before a partner joins.</p></div></div>
-          <div class="assurance-item"><span class="ai-icon">₹</span><div><b>Clear pricing</b><p>See charges at booking time — no surprise bills after the work starts.</p></div></div>
-          <div class="assurance-item"><span class="ai-icon">★</span><div><b>Quality feedback</b><p>Every completed job is rated, so you can choose with confidence.</p></div></div>
+          <div class="assurance-item"><span class="ai-icon icon-shield">🛡️</span><div><b>Verified partners</b><p>Identity, qualifications and work history are reviewed before a partner joins.</p></div></div>
+          <div class="assurance-item"><span class="ai-icon icon-rupee">₹</span><div><b>Clear pricing</b><p>See charges at booking time — no surprise bills after the work starts.</p></div></div>
+          <div class="assurance-item"><span class="ai-icon icon-star">★</span><div><b>Quality feedback</b><p>Every completed job is rated, so you can choose with confidence.</p></div></div>
+        </div>
+      </section>
+
+      <!-- Collections (real photography) -->
+      <section class="section" id="collections">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">LIFE MADE EASIER</p>
+            <h2>Small fixes. Big relief.</h2>
+            <p>A little help, every day — with professionals who show up ready.</p>
+          </div>
+          <div class="collection-grid">
+            <a class="collection-card" href="#services">
+              <img src="assets/img/cleaning.jpg" alt="Fresh start at home" loading="lazy" decoding="async" />
+              <span class="collection-overlay"><b>Fresh start at home</b><small>Deep cleaning, done right.</small></span>
+            </a>
+            <a class="collection-card" href="#services">
+              <img src="assets/img/electrical.jpg" alt="Electrical repairs" loading="lazy" decoding="async" />
+              <span class="collection-overlay"><b>Keep everyday life running</b><small>AC care & electrical help.</small></span>
+            </a>
+            <a class="collection-card" href="#services">
+              <img src="assets/img/moving.jpg" alt="Moving day support" loading="lazy" decoding="async" />
+              <span class="collection-overlay"><b>Your next chapter starts here</b><small>Moving & packing support.</small></span>
+            </a>
+            <a class="collection-card" href="#services">
+              <img src="assets/img/beauty.jpg" alt="Salon at home" loading="lazy" decoding="async" />
+              <span class="collection-overlay"><b>A little time for yourself</b><small>Beauty & salon care at home.</small></span>
+            </a>
+          </div>
         </div>
       </section>
 
       <!-- Services -->
-      <section class="section" id="services">
+      <section class="section section-alt" id="services">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">SERVICES</p>
@@ -108,7 +166,7 @@
       </section>
 
       <!-- How it works -->
-      <section class="section section-alt" id="how">
+      <section class="section" id="how">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">HOW IT WORKS</p>
@@ -123,7 +181,7 @@
       </section>
 
       <!-- For professionals -->
-      <section class="section" id="professionals">
+      <section class="section section-alt" id="professionals">
         <div class="container pro-grid">
           <div class="pro-copy">
             <p class="eyebrow">FOR SERVICE PROFESSIONALS</p>
@@ -178,6 +236,7 @@
         <div class="footer-col">
           <h3>Product</h3>
           <a href="#services">Services</a>
+          <a href="#collections">Collections</a>
           <a href="#how">How it works</a>
           <a href="#professionals">For professionals</a>
           <a href="#app">Customer app</a>
