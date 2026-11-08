@@ -274,3 +274,10 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 .mock-card, .app-card { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 .hero-photo, .collection-card { will-change: transform; }
+
+.svc-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--purple-soft); color: var(--purple); }
+.svc-icon svg { width: 24px; height: 24px; }
+.ai-icon svg { width: 22px; height: 22px; }
+.unslop-credit { margin-top: 2px; }
+.unslop-credit a { font-size: 12px; color: #948ba9; text-decoration: none; }
+.unslop-credit a:hover { color: #fff; }
