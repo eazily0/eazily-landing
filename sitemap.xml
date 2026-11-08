@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://eazily.online/</loc>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://eazily.online/assets/img/hero-editorial.jpg</image:loc>
+      <image:title>Eazily home services</image:title>
+      <image:caption>Vetted local professionals for home services, booked in minutes.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eazily.online/assets/img/cleaning.jpg</image:loc>
+      <image:title>Deep cleaning at home</image:title>
+      <image:caption>A fresh start at home with professional deep cleaning.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eazily.online/assets/img/electrical.jpg</image:loc>
+      <image:title>AC care and electrical repairs</image:title>
+      <image:caption>AC service and electrical help to keep everyday life running.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eazily.online/assets/img/moving.jpg</image:loc>
+      <image:title>Moving day support</image:title>
+      <image:caption>Moving and packing support when you start a new chapter.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://eazily.online/assets/img/beauty.jpg</image:loc>
+      <image:title>Salon at home</image:title>
+      <image:caption>Beauty and salon care for a little time for yourself.</image:caption>
+    </image:image>
   </url>
 </urlset>
