@@ -266,57 +266,11 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   .collection-card { min-height: 190px; }
 }
 
-/* ---- Motion & material effects (GSAP-friendly, reduced-motion safe) ---- */
-.hero { position: relative; overflow: hidden; }
-.hero::before {
-  content: ""; position: absolute; width: 560px; height: 560px; border-radius: 50%;
-  top: -200px; right: -140px; pointer-events: none;
-  background: radial-gradient(circle at 30% 30%, rgb(109 40 217 / .16), transparent 65%);
-  animation: hero-blob 14s ease-in-out infinite alternate;
-}
-@keyframes hero-blob { to { transform: translate(-44px, 30px) scale(1.08); } }
-
-.btn-primary { position: relative; overflow: hidden; }
-.btn-primary::after {
-  content: ""; position: absolute; top: 0; left: -80%; width: 60%; height: 100%;
-  background: linear-gradient(100deg, transparent, rgb(255 255 255 / .35), transparent);
-  transform: skewX(-20deg); transition: left .5s ease; pointer-events: none;
-}
-.btn-primary:hover::after { left: 120%; }
-
-.brand-mark span { display: inline-block; animation: dot-pulse 3.2s ease-in-out infinite; }
-@keyframes dot-pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.2); } }
-
-.mock-card, .app-card { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
-
-.hero-photo, .collection-card { will-change: transform; }
-
-@media (prefers-reduced-motion: reduce) {
-  .hero::before, .brand-mark span { animation: none; }
-  .btn-primary::after { display: none; }
-}
-
-/* ---- Full motion system: progress, marquee, conic border ---- */
+/* ---- Motion essentials (calm) ---- */
 .scroll-progress {
   position: fixed; top: 0; left: 0; z-index: 60; height: 3px; width: 100%;
   transform-origin: 0 50%; transform: scaleX(0);
   background: linear-gradient(90deg, var(--purple), var(--amber), var(--green));
 }
-
-.ticker { overflow: hidden; background: var(--purple-deep); color: #e7dcf5; }
-.ticker-track { display: flex; width: max-content; animation: ticker-scroll 32s linear infinite; }
-.ticker-track span { flex: none; padding: 12px 0; font-size: 14px; font-weight: 600; letter-spacing: .04em; }
-@keyframes ticker-scroll { to { transform: translateX(-50%); } }
-
-.app-card { position: relative; isolation: isolate; }
-.app-card::before {
-  content: ""; position: absolute; inset: -2px; border-radius: 26px; z-index: -1;
-  background: conic-gradient(from 0deg, var(--purple), var(--amber), var(--green), var(--purple));
-  animation: app-border-spin 6s linear infinite;
-}
-@keyframes app-border-spin { to { transform: rotate(360deg); } }
-
-@media (prefers-reduced-motion: reduce) {
-  .ticker-track { animation: none; }
-  .app-card::before { animation: none; }
-}
+.mock-card, .app-card { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.hero-photo, .collection-card { will-change: transform; }
